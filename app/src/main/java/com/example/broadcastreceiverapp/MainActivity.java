@@ -22,4 +22,12 @@ public class MainActivity extends AppCompatActivity {
 //        MyBroadcastReceiver objReceiver = new MyBroadcastReceiver();
 //        registerReceiver(objReceiver,intentFilter);
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mReceiver != null) {
+            unregisterReceiver(mReceiver);
+        }
+    }
 }

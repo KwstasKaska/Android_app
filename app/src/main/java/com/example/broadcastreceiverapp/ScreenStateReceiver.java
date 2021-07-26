@@ -13,10 +13,10 @@ public class ScreenStateReceiver extends BroadcastReceiver {
         String action = intent.getAction();
         if (Intent.ACTION_SCREEN_ON.equals(action)) {
             Log.i("It is on","It is on");
-            Toast.makeText(context,"Its is on",Toast.LENGTH_LONG).show();
+            Toast.makeText(context,"It is on",Toast.LENGTH_LONG).show();
         } else if (Intent.ACTION_SCREEN_OFF.equals(action)) {
             Log.i("It is off","It is off");
-            Toast.makeText(context,"Its is off",Toast.LENGTH_LONG).show();
+            Toast.makeText(context,"It is off",Toast.LENGTH_LONG).show();
         }
     }
 }
