@@ -10,14 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BroadcastReceiverApp">
         <receiver
-            android:name=".MyBroadcastReceiver"
+            android:name=".ScreenStateReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="switchOnDevice">
-
-                </action>
+                <action android:name="android.intent.action.SCREEN_ON"/>
             </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
         </receiver>
 
         <activity android:name=".MainActivity">
