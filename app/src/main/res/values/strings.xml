@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">BroadcastReceiverApp</string>
+    <string name="Hello">Welcome to the easiest app ever!</string>
+    <string name="Email">Enter your email</string>
+    <string name="Password">Enter your password</string>
+    <string name="First">First Step:</string>
+    <string name="Join">Join</string>
+    <string name="NoAccount">Register Here!</string>
+    <string name="NotRegisteredYet">Havent Registered Yet..?</string>
+    <string name="SecondStep">Second Step:</string>
+    <string name="Age">Select your age</string>
+    <string name="ConfirmPassword">Confirm Password</string>
+    <string name="SelectSex">Select your sex</string>
+    <string-array name="age">
+        <item>18-24</item>
+        <item>25-30</item>
+        <item>31-40</item>
+        <item>41-50</item>
+        <item>51-60</item>
+        <item>60+</item>
+        <item>not disclosed</item>
+    </string-array>
+    <string-array name="sex">
+        <item>male</item>
+        <item>female</item>
+        <item>other</item>
+        <item>not disclosed</item>
+    </string-array>
 </resources>

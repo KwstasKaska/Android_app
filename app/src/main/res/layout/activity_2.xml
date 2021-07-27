@@ -20,8 +20,8 @@
         android:inputType="textEmailAddress"
         android:shadowColor="#9C27B0"
         android:singleLine="false"
-        android:textColor="@color/purple_200"
-        android:textColorHighlight="@color/purple_200"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
         android:textColorHint="@color/purple_200"
         android:textColorLink="@color/purple_200"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,16 +56,14 @@
         android:layout_height="42dp"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="28dp"
         android:layout_marginEnd="120dp"
-        android:layout_marginBottom="331dp"
         android:background="@color/purple_200"
         android:text="@string/Join"
         app:backgroundTint="@color/purple_200"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/db2_password" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/db2_startTitle"
@@ -89,7 +87,7 @@
         android:layout_marginStart="58dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="50dp"
-        android:text="@string/First"
+        android:text="@string/SecondStep"
         android:textAlignment="viewStart"
         android:textColor="@color/purple_200"
         android:textSize="18sp"
@@ -98,34 +96,53 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/db2_startTitle" />
 
-    <Button
-        android:id="@+id/btn_register"
+    <Spinner
+        android:id="@+id/spinnerAge"
         android:layout_width="wrap_content"
-        android:layout_height="39dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginEnd="120dp"
-        android:text="@string/NoAccount"
-        android:textSize="12sp"
-        app:backgroundTint="@color/purple_200"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/db_secondTitle"
-        app:layout_constraintVertical_bias="0.029" />
+        app:layout_constraintTop_toBottomOf="@+id/db2_secondTitle" />
 
     <TextView
-        android:id="@+id/db_secondTitle"
+        android:id="@+id/db2_secondTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="100dp"
-        android:text="@string/NotRegisteredYet"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/Age"
         android:textAlignment="center"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_join" />
+        app:layout_constraintTop_toBottomOf="@+id/db2_password" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/SelectSex"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerAge" />
+
+    <Spinner
+        android:id="@+id/spinnerSex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
