@@ -20,8 +20,8 @@
         android:inputType="textEmailAddress"
         android:shadowColor="#9C27B0"
         android:singleLine="false"
-        android:textColor="@color/white"
-        android:textColorHighlight="@color/white"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/black"
         android:textColorHint="@color/purple_200"
         android:textColorLink="@color/purple_200"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,8 +40,8 @@
         android:gravity="clip_horizontal|center_horizontal"
         android:hint="@string/Password"
         android:inputType="textPassword"
-        android:textColor="@color/white"
-        android:textColorHighlight="@color/white"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/black"
         android:textColorHint="@color/purple_200"
         android:textColorLink="@color/purple_200"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,7 +50,7 @@
         app:layout_constraintTop_toBottomOf="@+id/db2_email" />
 
     <Button
-        android:id="@+id/btn_join"
+        android:id="@+id/btn_create"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="176dp"
         android:layout_height="42dp"
@@ -58,12 +58,14 @@
         android:layout_marginStart="120dp"
         android:layout_marginEnd="120dp"
         android:background="@color/purple_200"
-        android:text="@string/Join"
+        android:text="Register"
         app:backgroundTint="@color/purple_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerSex"
+        app:layout_constraintVertical_bias="0.237" />
 
     <TextView
         android:id="@+id/db2_startTitle"
@@ -128,7 +130,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="50dp"
-        android:text="@string/SelectSex"
+        android:text="Select your gender"
         android:textAlignment="center"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"

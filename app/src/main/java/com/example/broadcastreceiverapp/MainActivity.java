@@ -9,8 +9,8 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    private ScreenStateReceiver mReceiver;
-    private Button button;
+    private ScreenStateReceiver mReceiver;  //References to buttons and other controls on the layout
+    private Button button_register;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
         mReceiver = new ScreenStateReceiver();
         registerReceiver(mReceiver, intentFilter);
 
-        button = (Button) findViewById(R.id.btn_register);
-        button.setOnClickListener(new View.OnClickListener() {
+        button_register = (Button) findViewById(R.id.btn_register);
+        button_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openActivity2();
