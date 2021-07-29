@@ -5,17 +5,17 @@ public class CustomerModel {
     private int id;
     private String customerEmail;
     private String customerPassword;
-    private String customerAge;
-    private String customerGender;
+    private String user_age;
+    private String user_sex;
 
     //constructors
 
-    public CustomerModel(int id, String customerEmail, String customerPassword, String customerAge, String customerGender) {
+    public CustomerModel(int id, String customerEmail, String customerPassword, String user_age, String user_sex) {
         this.id = id;
         this.customerEmail = customerEmail;
         this.customerPassword = customerPassword;
-        this.customerAge = customerAge;
-        this.customerGender = customerGender;
+        this.user_age = user_age;
+        this.user_sex = user_sex;
     }
 
     public CustomerModel() {
@@ -29,8 +29,8 @@ public class CustomerModel {
                 "id=" + id +
                 ", customerEmail='" + customerEmail + '\'' +
                 ", customerPassword='" + customerPassword + '\'' +
-                ", customerAge=" + customerAge +
-                ", customerGender='" + customerGender + '\'' +
+                ", customerAge=" + user_age +
+                ", customerGender='" + user_sex + '\'' +
                 '}';
     }
 
@@ -60,19 +60,19 @@ public class CustomerModel {
         this.customerPassword = customerPassword;
     }
 
-    public String getCustomerAge() {
-        return customerAge;
+    public String getUser_age() {
+        return user_age;
     }
 
-    public void setCustomerAge(String customerAge) {
-        this.customerAge = customerAge;
+    public void setUser_age(String user_age) {
+        this.user_age = user_age;
     }
 
-    public String getCustomerGender() {
-        return customerGender;
+    public String getUser_sex() {
+        return user_sex;
     }
 
-    public void setCustomerGender(String customerGender) {
-        this.customerGender = customerGender;
+    public void setUser_sex(String user_sex) {
+        this.user_sex = user_sex;
     }
 }
