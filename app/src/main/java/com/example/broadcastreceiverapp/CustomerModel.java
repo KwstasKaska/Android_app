@@ -29,12 +29,13 @@ public class CustomerModel {
                 "id=" + id +
                 ", customerEmail='" + customerEmail + '\'' +
                 ", customerPassword='" + customerPassword + '\'' +
-                ", customerAge=" + user_age +
-                ", customerGender='" + user_sex + '\'' +
+                ", user_age=" + user_age +
+                ", user_sex='" + user_sex + '\'' +
                 '}';
     }
 
     //getters sand setters
+
 
     public int getId() {
         return id;

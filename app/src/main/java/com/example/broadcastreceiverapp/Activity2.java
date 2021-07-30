@@ -45,6 +45,10 @@ public class Activity2 extends AppCompatActivity implements AdapterView.OnItemSe
             public void onClick(View v) {
                 CustomerModel customerModel = new CustomerModel(-1,cust_email.getText().toString(),cust_password.getText().toString(),spinnerAge.getSelectedItem().toString(),spinnerGender.getSelectedItem().toString());
                 Toast.makeText(Activity2.this,customerModel.toString(), Toast.LENGTH_SHORT).show();
+
+                DatabaseHelper databaseHelper = new DatabaseHelper(Activity2.this);
+                boolean success = databaseHelper.addOne(customerModel);
+                Toast.makeText(Activity2.this,"Success" + success, Toast.LENGTH_SHORT).show();
             }
         });
 
