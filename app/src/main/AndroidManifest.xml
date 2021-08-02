@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BroadcastReceiverApp">
-        <activity android:name=".Activity2" android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity2"
+            android:parentActivityName=".MainActivity" />
 
         <receiver
             android:name=".ScreenStateReceiver"
@@ -22,7 +27,7 @@
         <receiver
             android:name=".MyBroadcastReceiver"
             android:enabled="true"
-            android:exported="true"></receiver>
+            android:exported="true" />
 
         <activity android:name=".MainActivity">
             <intent-filter>

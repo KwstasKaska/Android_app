@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BroadcastReceiverApp</string>
+    <string name="app_name">The Easiest App Ever!</string>
     <string name="Hello">Welcome to the easiest app ever!</string>
     <string name="Email">Enter your email</string>
     <string name="Password">Enter your password</string>

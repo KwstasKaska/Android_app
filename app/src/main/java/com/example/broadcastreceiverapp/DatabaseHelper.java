@@ -2,6 +2,7 @@ package com.example.broadcastreceiverapp;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -53,5 +54,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else{
             return  true;
         }
+    }
+
+    public boolean checkUserEmail(String USER_EMAIL){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("Select * from USERS_TABLE where user_email = ?",new String[] {USER_EMAIL});
+        if(cursor.getCount()>0)
+            return true;
+        else
+            return false;
+    }
+
+    public boolean checkUserNamePassword(String USER_EMAIL,String USER_PASSWORD){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("Select * from USERS_TABLE where user_email = ? and user_password= ?",new String[] {USER_EMAIL,USER_PASSWORD});
+        if (cursor.getCount()>0)
+            return true;
+        else
+            return false;
     }
 }
