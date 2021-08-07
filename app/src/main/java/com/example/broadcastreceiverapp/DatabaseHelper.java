@@ -16,9 +16,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String USER_PASSWORD = "user_password";
     public static final String USER_AGE = "user_age";
     public static final String USER_SEX = "user_sex";
+    public static final String RECRUITING_TEAM = "recruiting_team";
 
     public DatabaseHelper(@Nullable Context context) {
-        super(context, "users.db", null, 1);
+        super(context, "users.db", null, 2);
     }
 
     //This is called the first time a database is accessed. There should be code in here to create a new database.
@@ -26,7 +27,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String createTableStatement =
                 "CREATE TABLE " + USERS_TABLE + " (" + ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + USER_EMAIL + " VARCHAR, " + USER_PASSWORD + " VARCHAR, " + USER_AGE + " " +
-                        "VARCHAR, " + USER_SEX + " VARCHAR)";
+                        "VARCHAR, " + USER_SEX +  " VARCHAR)";
 
         db.execSQL(createTableStatement);
     }
@@ -34,7 +35,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     //this is called if the database version number changes. it prevents users apps from breaking when you change the database design.
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        if (newVersion > oldVersion) {
+            String alterTableStatement =
+                    "ALTER TABLE " + USERS_TABLE + " ADD COLUMN " + RECRUITING_TEAM + " VARCHAR";
+            db.execSQL(alterTableStatement);
+        }
     }
 
     public boolean addOne(CustomerModel customerModel){
@@ -46,6 +51,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(USER_PASSWORD, customerModel.getCustomerPassword());
         cv.put(USER_AGE,customerModel.getUser_age());
         cv.put(USER_SEX, customerModel.getUser_sex());
+        cv.put(RECRUITING_TEAM, "5");
 
         long insert = db.insert(USERS_TABLE, null, cv);//the second parameter is if you try to insert an empty row, we keep it null
         if (insert == -1){
