@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.broadcastreceiverapp">
 
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,10 +26,7 @@
                 <action android:name="android.intent.action.SCREEN_ON" />
             </intent-filter>
         </receiver>
-        <receiver
-            android:name=".MyBroadcastReceiver"
-            android:enabled="true"
-            android:exported="true" />
+
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -36,6 +35,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Service that provides activity recognition data. Setting the android:exported attribute
+        to "false" stops other apps from starting this service, even when using an explicit
+        intent. -->
+        <service
+            android:name=".DetectedActivitiesIntentService"
+            android:exported="false" />
+
+        <service android:name=".BackgroundDetectedActivitiesService"></service>
+
     </application>
 
 </manifest>

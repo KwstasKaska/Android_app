@@ -11,6 +11,14 @@
     <string name="Age">Select your age</string>
     <string name="ConfirmPassword">Confirm Password</string>
     <string name="SelectSex">Select your sex</string>
+    <string name="activity_in_vehicle">In Vehicle</string>
+    <string name="activity_on_bicycle">On Bicycle</string>
+    <string name="activity_on_foot">On Foot</string>
+    <string name="activity_running">Running</string>
+    <string name="activity_still">Still</string>
+    <string name="activity_tilting">Tilting</string>
+    <string name="activity_walking">walking</string>
+    <string name="activity_unknown">Unknown</string>
     <string-array name="age">
         <item>18-24</item>
         <item>25-30</item>
@@ -26,4 +34,5 @@
         <item>other</item>
         <item>not disclosed</item>
     </string-array>
+
 </resources>
